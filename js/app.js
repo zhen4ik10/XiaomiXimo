@@ -3696,6 +3696,7 @@
             observeParents: true,
             slidesPerView: 1,
             spaceBetween: 0,
+            loop: true,
             speed: 800,
             parallax: true,
             autoplay: {
