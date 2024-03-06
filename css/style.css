@@ -376,7 +376,6 @@ h6 {
   --swiper-theme-color: #FF4040
 }
 .swiper {
-  flex: 1 1 100%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -384,6 +383,9 @@ h6 {
   list-style: none;
   padding: 0;
   z-index: 1
+}
+.swiper.hero__slider {
+  flex: 1 1 100%
 }
 .swiper-vertical > .swiper-wrapper {
   flex-direction: column
@@ -1087,7 +1089,7 @@ button.swiper-pagination-bullet {
   }
 }
 @media (min-width:991.98px) {
-  .swiper {
+  .swiper.hero__slider {
     flex: 1 1 53.33333%
   }
 }
