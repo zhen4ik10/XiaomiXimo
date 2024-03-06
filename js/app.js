@@ -3707,15 +3707,15 @@
                 clickable: true
             },
             on: {}
-        }); else if (document.querySelector(".full-slider__slider")) new swiper_core_Swiper(".full-slider__slider", {
-            modules: [ Autoplay, Pagination, Parallax ],
+        });
+        if (document.querySelector(".full-slider__slider")) new swiper_core_Swiper(".full-slider__slider", {
+            modules: [ Autoplay, Pagination ],
             observer: true,
             observeParents: true,
             slidesPerView: 1,
             spaceBetween: 0,
             loop: true,
             speed: 800,
-            parallax: true,
             autoplay: {
                 delay: 3600
             },
