@@ -4500,16 +4500,27 @@
                 on: {}
             });
             if (document.querySelector(".full-slider__slider")) new swiper_core_Swiper(".full-slider__slider", {
-                modules: [ Autoplay, Pagination, Navigation ],
+                modules: [ Autoplay, Pagination ],
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,
                 spaceBetween: 0,
-                loop: true,
                 speed: 800,
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 15,
+                        autoHeight: true
+                    },
+                    480: {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                        autoHeight: true
+                    }
                 },
                 on: {}
             });

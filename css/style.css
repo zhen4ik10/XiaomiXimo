@@ -256,11 +256,9 @@ textarea.input {
   flex-wrap: wrap;
   row-gap: .3125rem
 }
-.menu__item {
-  padding: 2.625rem 1.1875rem;
-  transition: all .3s ease-in-out
-}
 .menu__link {
+  padding: 2.625rem 1.1875rem;
+  transition: all .3s ease-in-out;
   text-transform: uppercase
 }
 .icon-menu {
@@ -473,15 +471,14 @@ textarea.input {
 .select-color__slide.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-next.swiper-slide-thumb-active,
 .select-color__slide.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-thumb-active {
   -webkit-transform: scale(.9);
-  transform: scale(.9)
+  transform: scale(.9);
+  opacity: .5
 }
 .select-color__btn {
   width: 5rem;
   height: .75rem;
   flex: 0 0 5rem;
   border-radius: 1.875rem;
-  -webkit-transform: scale(1);
-  transform: scale(1);
   background-color: var(--color-bg);
   border: var(--border)
 }
@@ -1355,10 +1352,8 @@ button.swiper-pagination-bullet {
   .full-slider__slider .swiper-pagination-custom,
   .full-slider__slider .swiper-pagination-fraction,
   .full-slider__slider .swiper-vertical > .swiper-pagination-bullets {
-    padding-right: 10px
-  }
-  .swiper-pagination-bullet {
-    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,4px))
+    padding-right: 10px;
+    display: none
   }
 }
 @media (max-width:379.98px) {
@@ -1522,11 +1517,11 @@ button.swiper-pagination-bullet {
     align-items: flex-start;
     row-gap: .625rem
   }
-  .menu__item {
-    padding: 1.5rem 1.1875rem
-  }
   .menu__link {
     font-size: 1.5rem
+  }
+  .menu__link {
+    padding: 1.5rem 1.1875rem
   }
   .icon-menu {
     display: block;
@@ -1578,7 +1573,7 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width:47.99875em) and (any-hover:hover) {
-  .menu__item:hover {
+  .menu__link:hover {
     padding: 1.5rem 1.1875rem;
     -webkit-transform: translateX(10%);
     transform: translateX(10%)
@@ -1602,6 +1597,9 @@ button.swiper-pagination-bullet {
   .button {
     width: 100%;
     text-align: center
+  }
+  .full-slider__container {
+    margin: 0 -.9375rem
   }
   .select-color__btn {
     height: 1.25rem
@@ -1953,7 +1951,7 @@ button.swiper-pagination-bullet {
   }
 }
 @media (any-hover:hover) {
-  .menu__item:hover {
+  .menu__link:hover {
     background-color: #131313;
     color: #fff;
     padding: 2.625rem 1.1875rem
