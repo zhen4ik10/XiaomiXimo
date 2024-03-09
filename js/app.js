@@ -4491,12 +4491,8 @@
                 observeParents: true,
                 slidesPerView: 1,
                 spaceBetween: 0,
-                loop: true,
                 speed: 800,
                 parallax: true,
-                autoplay: {
-                    delay: 3600
-                },
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true
@@ -4504,7 +4500,7 @@
                 on: {}
             });
             if (document.querySelector(".full-slider__slider")) new swiper_core_Swiper(".full-slider__slider", {
-                modules: [ Autoplay, Pagination ],
+                modules: [ Autoplay, Pagination, Navigation ],
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,

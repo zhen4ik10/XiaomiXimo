@@ -466,6 +466,15 @@ textarea.input {
 .form__label-type:not(:last-child) {
   margin-bottom: .625rem
 }
+.select-color__slide {
+  transition: all .4s ease-in-out
+}
+.select-color__slide.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active.swiper-slide-thumb-active,
+.select-color__slide.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-next.swiper-slide-thumb-active,
+.select-color__slide.swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-thumb-active {
+  -webkit-transform: scale(.9);
+  transform: scale(.9)
+}
 .select-color__btn {
   width: 5rem;
   height: .75rem;
@@ -911,10 +920,6 @@ button.swiper-pagination-bullet {
   transition: .2s transform,.2s top;
   transition: .2s transform,.2s top,.2s -webkit-transform
 }
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 var(--swiper-pagination-bullet-horizontal-gap,4px)
-}
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   left: 50%;
@@ -1352,6 +1357,9 @@ button.swiper-pagination-bullet {
   .full-slider__slider .swiper-vertical > .swiper-pagination-bullets {
     padding-right: 10px
   }
+  .swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,4px))
+  }
 }
 @media (max-width:379.98px) {
   .full-slider__slider .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -1594,6 +1602,9 @@ button.swiper-pagination-bullet {
   .button {
     width: 100%;
     text-align: center
+  }
+  .select-color__btn {
+    height: 1.25rem
   }
 }
 @media (min-width:20em) and (max-width:76.875em) {
