@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240306072847">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240307195200">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,7 @@
 								<a href="#" data-goto-header data-goto=".characteristics" data-goto-speed="1000" class="menu__link">Характеристики</a>
 							</li>
 							<li class="menu__item">
-								<a href="#" class="menu__link">стоимость</a>
+								<a href="#" data-goto-header data-goto=".order" class="menu__link">стоимость</a>
 							</li>
 						</ul>
 					</nav>
@@ -393,6 +393,58 @@
 					</div>
 				</div>
 			</div>
+			<section class="page__order order">
+				<div class="order__container">
+					<div class="order__inner">
+						<form action="#" class="order__form form">
+							<h2 class="form__title title">Заказать</h2>
+
+							<p class="form__info">
+								Если Вы хотите заказать велосипед, <br> оставьте свой контакт и наш менеджер <br>
+								перезвонит вам в
+								ближайшее время
+							</p>
+							<input data-validate autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="имя" class="input input--margin">
+							<input data-validate autocomplete="off" type="number" name="form[]" data-error="Помилка" placeholder="телефон" class="input input--margin">
+
+							<div class="form__type">
+								<h4 class="form__label-type">выберите желаемый цвет</h4>
+								<div class="select-color__slider swiper">
+									<div class="select-color__wrapper swiper-wrapper">
+										<div class="select-color__slide swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active" style="width: 80px;">
+											<button type="button" class="select-color__btn" style="--color-bg:#6f6f6f"></button>
+										</div>
+										<div class="select-color__slide swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active" style="width: 80px;">
+											<button type="button" class="select-color__btn" style="--color-bg:#fff;--border:1px solid #131313"></button>
+										</div>
+										<div class="select-color__slide swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active" style="width: 80px;">
+											<button type="button" class="select-color__btn" style="--color-bg:#ff4040"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button type="button" class="button">ЗАКАЗАТЬ</button>
+
+						</form>
+						<div data-da=".order__form.form, 991, 4" class="order__slider swiper">
+							<div class="order__wrapper swiper-wrapper">
+								<div class="order__slide swiper-slide">
+									<!-- <span class="order__price">32 999 грн.</span> -->
+									<picture><source srcset="img/footer-slider/slide_1.webp" type="image/webp"><img src="img/footer-slider/slide_1.jpg" alt="slide_2"></picture>
+								</div>
+								<div class="order__slide swiper-slide">
+									<!-- <span class="order__price">33 999 грн.</span> -->
+									<picture><source srcset="img/footer-slider/slide_2.webp" type="image/webp"><img src="img/footer-slider/slide_2.jpg" alt="slide_2"></picture>
+								</div>
+								<div class="order__slide swiper-slide">
+									<!-- <span class="order__price">34 999 грн.</span> -->
+									<picture><source srcset="img/footer-slider/slide_3.webp" type="image/webp"><img src="img/footer-slider/slide_3.jpg" alt="slide_3"></picture>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 			<!-- <a href="#!" class="button">ЗАКАЗАТЬ</a>
 <h2 class="title">ХАрактеристики</h2> -->
 
@@ -417,7 +469,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240306072847"></script>
+	<script src="js/app.min.js?_v=20240307195200"></script>
 </body>
 
 </html>
